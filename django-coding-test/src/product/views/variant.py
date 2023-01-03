@@ -3,7 +3,7 @@ from django.views.generic import ListView, CreateView, UpdateView
 
 from product.forms import VariantForm
 from product.models import Variant
-
+from rest_framework.views import APIView
 
 class BaseVariantView(generic.View):
     form_class = VariantForm

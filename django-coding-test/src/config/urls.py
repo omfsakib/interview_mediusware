@@ -24,7 +24,9 @@ from config import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('authentication.urls')),
-    path('product/', include('product.urls'))
+    path('product/', include('product.urls')),
+    path('api/v1',include('djoser.urls')),
+    path('api/v1/',include('djoser.urls.authtoken')),
 ]
 
 if settings.DEBUG:
